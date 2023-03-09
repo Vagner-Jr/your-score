@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --bg-background: #FFFFE9;
+    --bg-sidebar: #0d80d4;
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body * {
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    background: var(--bg-background);
+}
+
+body > div {
+    height: 100%;
+    min-width: 300px;
+    display: grid;
+    grid-template-areas: 
+    'sidebar main';
+    grid-template-columns: 80px 1fr;
+}
+
+body div.open {
+    height: 100%;
+    min-width: 300px;
+    display: grid;
+    grid-template-areas: 
+    'sidebar main';
+    grid-template-columns: 160px 1fr;
+}
+
+/*div#sidebar*/
+body > div div#sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    padding: 0 28px;
+    background: var(--bg-sidebar);
+}
+
+div#sidebar div#header {
+    height: 64px;
+    display: flex;
+}
+
+div#header button {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+div#header > p {
+    color: var(--text-color);
+}
+
+div#sidebar div#pages {
+    flex: 1;
+    padding-top: 64px;
+}
+
+div#pages a {
+    text-decoration: none;
+}
+
+div#pages li {
+    margin-bottom: 24px;
+}
+
+i {
+    color: var(--text-color);
+    font-size: 24px;
+}
+
+div#sidebar div#footer {
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+div#footer button {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/*div#register*/
+body > div div#register {
+    grid-area: main;
+    display: flex;
+}
+
+div#register div#form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 64px 16px 16px;
+    box-shadow: -5px 0 10px #e6e6d1 inset,
+    5px 0 10px #e6e6d1 inset;
+}
+
+div#form > h4 {
+    margin: 0 12px;
+    text-align: justify;
+}
+
+div#form > p {
+    margin: 0 12px;
+    font-style: italic;
+    font-size: 12px;
+}
+
+div#form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 18px;
+    background: #d6eefd;
+}
+
+div#score1,
+div#score2 {
+    display: flex;
+}
+
+label {
+    margin-right: 4px;
+}
+
+input {
+    flex: 1;
+    padding: 0 8px;
+    border-radius: 4px;
+    border: 0;
+    outline: 0;
+    background: var(--bg-sidebar);
+}
+
+/* para remover a seta no Chrome e Safari*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type='submit'] {
+    padding: 6px 12px;
+}
+
+div#register div#score-table {
+    flex: 1;
+    padding: 16px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+thead th:first-child {
+    border-bottom: none
+}
+
+tbody tr:first-child td {
+    padding-top: 18px;
+}
+
+td {
+    border-bottom: 1px solid black;
+}
+
+@media (max-width: 720px) {
+    div#app div#register {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div#register div#form {
+        width: 100%;
+        height: fit-content;
+    }
+}

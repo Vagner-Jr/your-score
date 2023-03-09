@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sua Nota | DevN</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./assets/student.svg" />
+    <script src="https://unpkg.com/phosphor-icons"></script>
+  </head>
+
+  <body>
+    <div class=""> 
+      <div id="sidebar">
+        <div id="header">
+          <button id="btn-sidebar">
+            <i class="ph ph-list"></i>
+          </button>
+        </div>
+
+        <div id="pages">
+          <ul class="list-pages">
+            <li>
+              <a href="/"><i class="ph ph-house"></i></a>
+            </li>
+            <li>
+              <a href="/"><i class="ph ph-backpack"></i></a>
+            </li>
+            <li>
+              <a href="/"><i class="ph ph-graduation-cap"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div id="footer">
+          <button>
+            <i class="ph ph-arrow-left"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="register">
+        <div id="form">
+          <h1>Próximo ano...</h1>
+
+          <h4>
+            Use esse aplicativo para calcular a soma das notas de seus alunos e
+            verificar a situação deles.
+          </h4>
+          <p>
+            &quot;Um bom mestre tem sempre esta preocupação: ensinar o aluno a
+            desenvencilhar-se sozinho.&quot;
+          </p>
+
+          <form>
+            <div id="score1">
+              <label for="inScore1">1° Nota:</label>
+              <input
+                type="number"
+                id="inScore1"
+                min="0"
+                max="10"
+                step="0.01"
+                required
+              />
+            </div>
+
+            <div id="score2">
+              <label for="inScore2">2° Nota:</label>
+              <input
+                type="number"
+                id="inScore2"
+                min="0"
+                max="10"
+                step="0.01"
+                required
+              />
+            </div>
+
+            <input type="submit" value="CALCULAR" />
+          </form>
+        </div>
+
+        <div id="score-table">
+          <table>
+            <thead>
+              <tr>
+                <th>&emsp;</th>
+                <th>1° NOTA</th>
+                <th>2° NOTA</th>
+                <th>TOTAL</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>vagner</td>
+                <td>nota1</td>
+                <td>nota2</td>
+                <td>total</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="script.js"></script>
+  </body>
+</html>
