@@ -119,7 +119,7 @@ body > div div#register {
     grid-area: main;
     display: flex;
     flex-direction: column;
-    overflow-y: scrollw;
+    overflow-y: scroll;
 }
 
 div#register > div {
