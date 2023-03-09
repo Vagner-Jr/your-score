@@ -32,9 +32,6 @@ body > div {
 }
 
 body div.open {
-    height: 100%;
-    min-width: 300px;
-    display: grid;
     grid-template-areas: 
     'sidebar main';
     grid-template-columns: 160px 1fr;
@@ -47,11 +44,16 @@ body > div div#sidebar {
     flex-direction: column;
     padding: 0 28px;
     background: var(--bg-sidebar);
+    box-shadow: 5px 0 10px #d1d1bf;
 }
 
 div#sidebar div#header {
     height: 64px;
     display: flex;
+}
+
+div.open div#header {
+    justify-content: center;
 }
 
 div#header button {
@@ -70,12 +72,24 @@ div#sidebar div#pages {
     padding-top: 64px;
 }
 
+div#pages li {
+    margin-bottom: 24px;
+}
+
 div#pages a {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
     text-decoration: none;
 }
 
-div#pages li {
-    margin-bottom: 24px;
+a p.page-link {
+    margin-left: 24px;
+    display: none;
+}
+
+div.open .page-link {
+    display: initial;
 }
 
 i {
@@ -89,6 +103,10 @@ div#sidebar div#footer {
     align-items: center;
 }
 
+div.open div#footer {
+    justify-content: center;
+}
+
 div#footer button {
     background: transparent;
     outline: none;
@@ -100,32 +118,33 @@ div#footer button {
 body > div div#register {
     grid-area: main;
     display: flex;
+    flex-direction: column;
+    overflow-y: scrollw;
 }
 
-div#register div#form {
-    width: 400px;
+div#register > div {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
     padding: 64px 16px 16px;
-    box-shadow: -5px 0 10px #e6e6d1 inset,
-    5px 0 10px #e6e6d1 inset;
 }
 
-div#form > h4 {
-    margin: 0 12px;
+div#register > div h4 {
+    margin: 0 32px;
     text-align: justify;
 }
 
-div#form > p {
-    margin: 0 12px;
+div#register > div p {
+    margin: 0 32px;
     font-style: italic;
     font-size: 12px;
 }
 
-div#form form {
-    width: 100%;
+div#register > div form {
+    width: 80%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -135,22 +154,17 @@ div#form form {
     background: #d6eefd;
 }
 
-div#score1,
-div#score2 {
-    display: flex;
-}
-
 label {
     margin-right: 4px;
 }
 
 input {
-    flex: 1;
-    padding: 0 8px;
-    border-radius: 4px;
+    width: 100%;
+    padding: 6px 8px 0 0;
     border: 0;
     outline: 0;
-    background: var(--bg-sidebar);
+    background: transparent;
+    border-bottom: 1px solid var(--bg-sidebar);
 }
 
 /* para remover a seta no Chrome e Safari*/
@@ -161,7 +175,10 @@ input::-webkit-inner-spin-button {
 }
 
 input[type='submit'] {
+    height: initial;
     padding: 6px 12px;
+    border-radius: 4px;
+    background: var(--bg-sidebar);
 }
 
 div#register div#score-table {
@@ -179,17 +196,59 @@ thead th:first-child {
 }
 
 tbody tr:first-child td {
-    padding-top: 18px;
+    padding-top: 24px;
 }
 
 td {
+    padding-top: 12px;
     border-bottom: 1px solid black;
 }
 
 @media (max-width: 720px) {
-    div#app div#register {
+
+    body > div {
+        grid-template-areas: 
+        'sidebar'
+        'main';
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1fr;
+    }
+
+    body div.open {
+        grid-template-areas: 
+        'sidebar'
+        'main';
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1fr;
+    }
+
+    body > div div#sidebar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0 16px;
+    }
+    
+    div#sidebar div#pages {
+        padding-top: 0px;
+        flex: 0;
+    }
+
+    div#pages ul {
         display: flex;
-        flex-direction: column;
+    }
+
+    div#pages li {
+        margin: 0 12px;
+    }
+
+    div#header button,
+    div#footer i {
+        display: none;
+    }
+
+    div#register > div {
+        box-shadow: 5px 0 10px red inset,
     }
 
     div#register div#form {

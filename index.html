@@ -11,39 +11,42 @@
   </head>
 
   <body>
-    <div class=""> 
+    <div class="">
       <div id="sidebar">
         <div id="header">
           <button id="btn-sidebar">
             <i class="ph ph-list"></i>
           </button>
         </div>
-
         <div id="pages">
           <ul class="list-pages">
             <li>
-              <a href="/"><i class="ph ph-house"></i></a>
+              <a href="/">
+                <i class="ph ph-house"></i>
+                <p class="page-link">HOME</p>
+              </a>
             </li>
             <li>
-              <a href="/"><i class="ph ph-backpack"></i></a>
+              <a href="/">
+                <i class="ph ph-backpack"></i>
+                <p class="page-link">TURMA</p>
+              </a>
             </li>
             <li>
-              <a href="/"><i class="ph ph-graduation-cap"></i></a>
+              <a href="/">
+                <i class="ph ph-graduation-cap"></i>
+                <p class="page-link">PROF°</p>
+              </a>
             </li>
           </ul>
         </div>
-
         <div id="footer">
-          <button>
-            <i class="ph ph-arrow-left"></i>
-          </button>
+          <i class="ph ph-arrow-left"></i>
         </div>
       </div>
-
       <div id="register">
-        <div id="form">
+        <div>
           <h1>Próximo ano...</h1>
-
           <h4>
             Use esse aplicativo para calcular a soma das notas de seus alunos e
             verificar a situação deles.
@@ -52,9 +55,12 @@
             &quot;Um bom mestre tem sempre esta preocupação: ensinar o aluno a
             desenvencilhar-se sozinho.&quot;
           </p>
-
           <form>
-            <div id="score1">
+            <div>
+              <label for="inName">Aluno: </label>
+              <input type="text" id="inName" required />
+            </div>
+            <div>
               <label for="inScore1">1° Nota:</label>
               <input
                 type="number"
@@ -65,8 +71,7 @@
                 required
               />
             </div>
-
-            <div id="score2">
+            <div>
               <label for="inScore2">2° Nota:</label>
               <input
                 type="number"
@@ -77,30 +82,20 @@
                 required
               />
             </div>
-
             <input type="submit" value="CALCULAR" />
           </form>
         </div>
-
         <div id="score-table">
           <table>
             <thead>
               <tr>
-                <th>&emsp;</th>
+                <th>NOME</th>
                 <th>1° NOTA</th>
                 <th>2° NOTA</th>
                 <th>TOTAL</th>
               </tr>
             </thead>
-
-            <tbody>
-              <tr>
-                <td>vagner</td>
-                <td>nota1</td>
-                <td>nota2</td>
-                <td>total</td>
-              </tr>
-            </tbody>
+            <tbody id="student"></tbody>
           </table>
         </div>
       </div>
