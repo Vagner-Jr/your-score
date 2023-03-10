@@ -4,6 +4,7 @@
     --bg-background: #FFFFE9;
     --bg-sidebar: #0d80d4;
     --text-color: #ffffff;
+    --woman-card: rgba(255, 0, 0, 0.735);
 }
 
 * {
@@ -45,21 +46,15 @@ body > div div#sidebar {
     padding: 0 28px;
     background: var(--bg-sidebar);
     box-shadow: 5px 0 10px #d1d1bf;
-    color: var(--text-color);
 }
 
 div#sidebar div#header {
     height: 64px;
     display: flex;
-    align-items: center;
 }
 
-div#header > p {
-    display: none;
-}
-
-div.open div#header > p {
-    display: block;
+div.open div#header {
+    justify-content: center;
 }
 
 div#header button {
@@ -67,7 +62,10 @@ div#header button {
     outline: none;
     border: none;
     cursor: pointer;
-    margin-right: 24px;
+}
+
+div#header > p {
+    color: var(--text-color);
 }
 
 div#sidebar div#pages {
@@ -82,8 +80,8 @@ div#pages li {
 div#pages a {
     display: flex;
     align-items: center;
-    text-decoration: none;
     color: var(--text-color);
+    text-decoration: none;
 }
 
 a p.page-link {
@@ -95,7 +93,7 @@ div.open .page-link {
     display: initial;
 }
 
-div#sidebar i {
+i {
     color: var(--text-color);
     font-size: 24px;
 }
@@ -104,13 +102,10 @@ div#sidebar div#footer {
     height: 64px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-div#footer div#foto {
-    width: 40px;
-    height: 40px;
-    background: white;
+div.open div#footer {
+    justify-content: center;
 }
 
 div#footer button {
@@ -121,36 +116,80 @@ div#footer button {
 }
 
 /*div#dashboard*/
-body > div div#dashboard {
+body > div div#professors {
     grid-area: main;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
     overflow-y: scroll;    
     padding: 64px 16px 16px;
 }
 
-div#dashboard::-webkit-scrollbar {
+div#professors::-webkit-scrollbar {
     display: none;
 }
 
-div#dashboard h1 {
-    margin-bottom: 24px;
+div#professors div.woman,
+div#professors div.man {
+    width: 240px;
+    height: fit-content;
+    border-radius: 18px;
+    padding: 12px;
+    background: var(--text-color);
 }
 
-div#dashboard img {
-    width: 80%;
-    height: 320px;
+div#professors div.woman {
+    border: 2px solid var(--woman-card);
+}
+
+div#professors div.man {
+    border: 2px solid var(--bg-sidebar);
+}
+
+div.foto {
+    width: 100%;
+    height: 100px;
     object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 40px;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    background: var(--woman-card);
 }
 
-div#dashboard div#school {
-    width: 80%;
-} 
+div.info p {
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+div.new {
+    width: 240px;
+    height: 183px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    padding: 12px;
+    border: 1px solid var(--bg-sidebar);
+    transition: hover 1s;
+}
+
+div.new button {
+    width: 160px;
+    height: 100px;
+    font-size: 20px;
+    color: var(--bg-sidebar);
+    background: transparent;
+    outline: 0;
+    border: 0;
+    transition: .3s;
+}
+
+div.new button:hover {
+    color: #28a5ff;
+}
 
 @media (max-width: 720px) {
+
     body > div {
         grid-template-areas: 
         'sidebar'
@@ -188,8 +227,21 @@ div#dashboard div#school {
     }
 
     div#header button,
-    div#footer i,
-    div#footer div#foto {
+    div#footer i {
         display: none;
+    }
+
+    div#professors div#card {
+        width: 200px;
+        height: 400px;
+        border-radius: 0 0 24px 24px;
+        background: red;
+    }
+    
+    div#card div#info {
+        width: 98%;
+        height: 100%;
+        border-radius: 0 0 24px 24px;
+        background: white;
     }
 }

@@ -45,21 +45,15 @@ body > div div#sidebar {
     padding: 0 28px;
     background: var(--bg-sidebar);
     box-shadow: 5px 0 10px #d1d1bf;
-    color: var(--text-color);
 }
 
 div#sidebar div#header {
     height: 64px;
     display: flex;
-    align-items: center;
 }
 
-div#header > p {
-    display: none;
-}
-
-div.open div#header > p {
-    display: block;
+div.open div#header {
+    justify-content: center;
 }
 
 div#header button {
@@ -67,7 +61,10 @@ div#header button {
     outline: none;
     border: none;
     cursor: pointer;
-    margin-right: 24px;
+}
+
+div#header > p {
+    color: var(--text-color);
 }
 
 div#sidebar div#pages {
@@ -82,8 +79,8 @@ div#pages li {
 div#pages a {
     display: flex;
     align-items: center;
-    text-decoration: none;
     color: var(--text-color);
+    text-decoration: none;
 }
 
 a p.page-link {
@@ -95,7 +92,7 @@ div.open .page-link {
     display: initial;
 }
 
-div#sidebar i {
+i {
     color: var(--text-color);
     font-size: 24px;
 }
@@ -104,13 +101,10 @@ div#sidebar div#footer {
     height: 64px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-div#footer div#foto {
-    width: 40px;
-    height: 40px;
-    background: white;
+div.open div#footer {
+    justify-content: center;
 }
 
 div#footer button {
@@ -120,37 +114,102 @@ div#footer button {
     cursor: pointer;
 }
 
-/*div#dashboard*/
-body > div div#dashboard {
+/*div#register*/
+body > div div#register {
     grid-area: main;
     display: flex;
     flex-direction: column;
-    align-items: center;
     overflow-y: scroll;    
     padding: 64px 16px 16px;
 }
 
-div#dashboard::-webkit-scrollbar {
+div#register::-webkit-scrollbar {
     display: none;
 }
 
-div#dashboard h1 {
-    margin-bottom: 24px;
+div#register > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
 }
 
-div#dashboard img {
-    width: 80%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 40px;
+div#register > div h4 {
+    margin: 0 32px;
+    text-align: justify;
 }
 
-div#dashboard div#school {
+div#register > div p {
+    margin: 0 32px;
+    font-style: italic;
+    font-size: 12px;
+}
+
+div#register > div form {
     width: 80%;
-} 
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 18px;
+    background: #d6eefd;
+}
+
+label {
+    margin-right: 4px;
+}
+
+input {
+    width: 100%;
+    padding: 6px 8px 0 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid var(--bg-sidebar);
+}
+
+/* para remover a seta no Chrome e Safari*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type='submit'] {
+    height: initial;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background: var(--bg-sidebar);
+}
+
+div#register div#score-table {
+    flex: 1;
+    padding: 16px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+thead th:first-child {
+    border-bottom: none
+}
+
+tbody tr:first-child td {
+    padding-top: 24px;
+}
+
+td {
+    padding-top: 12px;
+    border-bottom: 1px solid black;
+}
 
 @media (max-width: 720px) {
+
     body > div {
         grid-template-areas: 
         'sidebar'
@@ -188,8 +247,16 @@ div#dashboard div#school {
     }
 
     div#header button,
-    div#footer i,
-    div#footer div#foto {
+    div#footer i {
         display: none;
+    }
+
+    div#register > div {
+        box-shadow: 5px 0 10px red inset,
+    }
+
+    div#register div#form {
+        width: 100%;
+        height: fit-content;
     }
 }

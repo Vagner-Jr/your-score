@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sua Nota | DevN</title>
+    <link rel="stylesheet" href="../css/prof.css" />
+    <link rel="icon" href="../assets/student.svg" />
+    <script src="https://unpkg.com/phosphor-icons"></script>
+  </head>
+
+  <body>
+    <div class="">
+      <div id="sidebar">
+        <div id="header">
+          <button id="btn-sidebar"><i class="ph ph-list"></i></button>
+        </div>
+
+        <div id="pages">
+          <ul class="list-pages">
+            <li>
+              <a href="/">
+                <i class="ph ph-house"></i>
+                <p class="page-link">HOME</p>
+              </a>
+            </li>
+            <li>
+              <a href="./score.html">
+                <i class="ph ph-backpack"></i>
+                <p class="page-link">TURMA</p>
+              </a>
+            </li>
+            <li>
+              <a href="#professor">
+                <i class="ph ph-graduation-cap"></i>
+                <p class="page-link">PROF°</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div id="footer"><i class="ph ph-arrow-left"></i></div>
+      </div>
+
+      <div id="professors">
+        <div class="woman">
+          <div class="foto"></div>
+
+          <div class="info">
+            <h3>Nome</h3>
+            <p>professor(a) de programação</p>
+          </div>
+        </div>
+
+        <div class="man">
+          <div class="foto"></div>
+
+          <div class="info">
+            <h3>Nome</h3>
+            <p>professor(a) de programação</p>
+          </div>
+        </div>
+
+        <div class="new">
+          <button id="btn-new">NOVO PROFESSOR</button>
+        </div>
+
+        <dialog>
+          <h1>Novo Professor</h1>
+
+          <button id="btn-close">OK!</button>
+        </dialog>
+      </div>
+    </div>
+
+    <script defer src="../script.js"></script>
+    <script defer src="../js/prof.js"></script>
+  </body>
+</html>

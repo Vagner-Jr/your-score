@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sua Nota | DevN</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="./assets/student.svg" />
     <script src="https://unpkg.com/phosphor-icons"></script>
   </head>
@@ -14,7 +14,11 @@
     <div class="">
       <div id="sidebar">
         <div id="header">
-          <button id="btn-sidebar"><i class="ph ph-list"></i></button>
+          <button id="btn-sidebar">
+            <i class="ph ph-list"></i>
+          </button>
+
+          <p>LOGO</p>
         </div>
 
         <div id="pages">
@@ -26,13 +30,13 @@
               </a>
             </li>
             <li>
-              <a href="/">
+              <a href="./pages/score.html">
                 <i class="ph ph-backpack"></i>
                 <p class="page-link">TURMA</p>
               </a>
             </li>
             <li>
-              <a href="/">
+              <a href="./pages/prof.html">
                 <i class="ph ph-graduation-cap"></i>
                 <p class="page-link">PROF°</p>
               </a>
@@ -40,68 +44,58 @@
           </ul>
         </div>
 
-        <div id="footer"><i class="ph ph-arrow-left"></i></div>
+        <div id="footer">
+          <div id="foto"></div>
+          <i class="ph ph-arrow-left"></i>
+        </div>
       </div>
 
-      <div id="register">
-        <div>
-          <h1>Próximo ano...</h1>
-          <h4>
-            Use esse aplicativo para calcular a soma das notas de seus alunos e
-            verificar a situação deles.
-          </h4>
+      <div id="dashboard">
+        <h1>Nome da Escola</h1>
+        <img src="./assets/school.jpg" alt="" />
+
+        <div id="school">
+          <h2>Title</h2>
           <p>
-            &quot;Um bom mestre tem sempre esta preocupação: ensinar o aluno a
-            desenvencilhar-se sozinho.&quot;
-          </p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, vero
+            porro obcaecati dolorum, culpa possimus ipsa autem fuga corporis
+            itaque at, saepe et sit fugit nobis placeat nemo consequatur quod.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, vero
+            porro obcaecati dolorum, culpa possimus ipsa autem fuga corporis
+            itaque at, saepe et sit fugit nobis placeat nemo consequatur quod.
+          </p> <br>
 
-          <form>
-            <div>
-              <label for="inName">Aluno: </label>
-              <input type="text" id="inName" required />
-            </div>
-            <div>
-              <label for="inScore1">1° Nota:</label>
-              <input
-                type="number"
-                id="inScore1"
-                min="0"
-                max="10"
-                step="0.01"
-                required
-              />
-            </div>
-            <div>
-              <label for="inScore2">2° Nota:</label>
-              <input
-                type="number"
-                id="inScore2"
-                min="0"
-                max="10"
-                step="0.01"
-                required
-              />
-            </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, vero
+            porro obcaecati dolorum, culpa possimus ipsa autem fuga corporis
+            itaque at, saepe et sit fugit nobis placeat nemo consequatur quod.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, vero
+            porro obcaecati dolorum, culpa possimus ipsa autem fuga corporis
+            itaque at, saepe et sit fugit nobis placeat nemo consequatur quod.
+          </p> <br>
 
-            <input type="submit" value="CALCULAR" />
-          </form>
-        </div>
+          <h2>Title</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, vero
+            porro obcaecati dolorum, culpa possimus ipsa autem fuga corporis
+            itaque at, saepe et sit fugit nobis placeat nemo consequatur quod.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, vero
+            porro obcaecati dolorum, culpa possimus ipsa autem fuga corporis
+            itaque at, saepe et sit fugit nobis placeat nemo consequatur quod.
+          </p> <br>
 
-        <div id="score-table">
-          <table>
-            <thead>
-              <tr>
-                <th>NOME</th>
-                <th>1° NOTA</th>
-                <th>2° NOTA</th>
-                <th>TOTAL</th>
-              </tr>
-            </thead>
-            <tbody id="student"></tbody>
-          </table>
+          <h2>Title</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, vero
+            porro obcaecati dolorum, culpa possimus ipsa autem fuga corporis
+            itaque at, saepe et sit fugit nobis placeat nemo consequatur quod.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, vero
+            porro obcaecati dolorum, culpa possimus ipsa autem fuga corporis
+            itaque at, saepe et sit fugit nobis placeat nemo consequatur quod.
+          </p> <br>
         </div>
       </div>
     </div>
-    <script defer src="./script.js"></script>
+    <script defer src="script.js"></script>
   </body>
 </html>
