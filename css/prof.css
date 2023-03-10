@@ -118,6 +118,7 @@ div#footer button {
 /*div#dashboard*/
 body > div div#professors {
     grid-area: main;
+    height: fit-content;
     display: flex;
     justify-content: center;
     gap: 12px;
@@ -186,6 +187,56 @@ div.new button {
 
 div.new button:hover {
     color: #28a5ff;
+}
+
+
+dialog::backdrop {
+    background-color:#ffffe95b;
+}
+
+dialog {
+    min-width: 300px;
+    text-align: center;
+    margin: 120px auto;
+    color: rgb(17, 173, 162);
+    border: 2px solid;
+    border-radius: 18px;
+    padding: 24px;
+}
+
+dialog h1 {
+    margin-bottom: 24px;
+}
+
+input[type='text'] {
+    width: 100%;
+    margin-bottom: 12px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(17, 173, 162);
+}
+
+form div:nth-child(3) {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(0, 0, 0, 0.550);
+}
+
+input[type='checkbox'] {
+    width: 16px;
+    height: 16px;
+    border: rgb(17, 173, 162);
+}
+
+input[type='submit'] {
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 0;
+    margin-top: 24px;
+    color: var(--text-color);
+    background: rgb(17, 173, 162);
 }
 
 @media (max-width: 720px) {

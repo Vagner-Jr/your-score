@@ -14,25 +14,29 @@
     <div class="">
       <div id="sidebar">
         <div id="header">
-          <button id="btn-sidebar"><i class="ph ph-list"></i></button>
+          <button id="btn-sidebar">
+            <i class="ph ph-list"></i>
+          </button>
         </div>
 
         <div id="pages">
           <ul class="list-pages">
             <li>
-              <a href="/">
+              <a href="../index.html">
                 <i class="ph ph-house"></i>
                 <p class="page-link">HOME</p>
               </a>
             </li>
+
             <li>
-              <a href="./score.html">
+              <a href="score.html">
                 <i class="ph ph-backpack"></i>
                 <p class="page-link">TURMA</p>
               </a>
             </li>
+
             <li>
-              <a href="#professor">
+              <a href="prof.html">
                 <i class="ph ph-graduation-cap"></i>
                 <p class="page-link">PROF°</p>
               </a>
@@ -40,7 +44,9 @@
           </ul>
         </div>
 
-        <div id="footer"><i class="ph ph-arrow-left"></i></div>
+        <div id="footer">
+          <i class="ph ph-arrow-left"></i>
+        </div>
       </div>
 
       <div id="professors">
@@ -67,9 +73,32 @@
         </div>
 
         <dialog>
-          <h1>Novo Professor</h1>
+          <h1>Novo <span>Professor</span></h1>
 
-          <button id="btn-close">OK!</button>
+          <form>
+            <div>
+              <input type="text" id="inName" placeholder="Nome" required />
+            </div>
+
+            <div>
+              <input
+                type="text"
+                id="inSubject"
+                placeholder="Matéria"
+                required
+              />
+            </div>
+
+            <div>
+              <input type="checkbox" id="manChecked" />
+              <label for="manChecked">Homem</label>
+              
+              <input type="checkbox" id="womanChecked" />
+              <label for="womanChecked">Mulher</label>
+            </div>
+
+            <input type="submit" value="OK!" />
+          </form>
         </dialog>
       </div>
     </div>
