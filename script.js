@@ -4,4 +4,3 @@ btnToggle.addEventListener("click", () => {
   const app = document.querySelector("body > div");
   app.classList.toggle("open");
 });
-

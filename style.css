@@ -31,14 +31,14 @@ body > div {
     grid-template-columns: 80px 1fr;
 }
 
-body div.open {
+body .open {
     grid-template-areas: 
     'sidebar main';
     grid-template-columns: 160px 1fr;
 }
 
 /*div#sidebar*/
-body > div div#sidebar {
+body > div #sidebar {
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
@@ -48,21 +48,21 @@ body > div div#sidebar {
     color: var(--text-color);
 }
 
-div#sidebar div#header {
+#sidebar #header {
     height: 64px;
     display: flex;
     align-items: center;
 }
 
-div#header > p {
+#header > p {
     display: none;
 }
 
-div.open div#header > p {
+.open #header > p {
     display: block;
 }
 
-div#header button {
+#header button {
     background: transparent;
     outline: none;
     border: none;
@@ -70,50 +70,50 @@ div#header button {
     margin-right: 24px;
 }
 
-div#sidebar div#pages {
+#sidebar #pages {
     flex: 1;
     padding-top: 64px;
 }
 
-div#pages li {
+#pages li {
     margin-bottom: 24px;
 }
 
-div#pages a {
+#pages a {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: var(--text-color);
 }
 
-a p.page-link {
+a .page-link {
     margin-left: 24px;
     display: none;
 }
 
-div.open .page-link {
+.open .page-link {
     display: initial;
 }
 
-div#sidebar i {
+#sidebar i {
     color: var(--text-color);
     font-size: 24px;
 }
 
-div#sidebar div#footer {
+#sidebar #footer {
     height: 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-div#footer div#foto {
+#footer #foto {
     width: 40px;
     height: 40px;
     background: white;
 }
 
-div#footer button {
+#footer button {
     background: transparent;
     outline: none;
     border: none;
@@ -121,7 +121,7 @@ div#footer button {
 }
 
 /*div#dashboard*/
-body > div div#dashboard {
+body > div #dashboard {
     grid-area: main;
     display: flex;
     flex-direction: column;
@@ -130,15 +130,15 @@ body > div div#dashboard {
     padding: 64px 16px 16px;
 }
 
-div#dashboard::-webkit-scrollbar {
+#dashboard::-webkit-scrollbar {
     display: none;
 }
 
-div#dashboard h1 {
+#dashboard h1 {
     margin-bottom: 24px;
 }
 
-div#dashboard img {
+#dashboard img {
     width: 80%;
     height: 320px;
     object-fit: cover;
@@ -146,7 +146,7 @@ div#dashboard img {
     margin-bottom: 40px;
 }
 
-div#dashboard div#school {
+#dashboard #school {
     width: 80%;
 } 
 
@@ -159,7 +159,7 @@ div#dashboard div#school {
         grid-template-rows: 80px 1fr;
     }
 
-    body div.open {
+    body .open {
         grid-template-areas: 
         'sidebar'
         'main';
@@ -167,29 +167,29 @@ div#dashboard div#school {
         grid-template-rows: 80px 1fr;
     }
 
-    body > div div#sidebar {
+    body > div #sidebar {
         flex-direction: row;
         align-items: center;
         justify-content: center;
         padding: 0 16px;
     }
     
-    div#sidebar div#pages {
+    #sidebar #pages {
         padding-top: 0px;
         flex: 0;
     }
 
-    div#pages ul {
+    #pages ul {
         display: flex;
     }
 
-    div#pages li {
+    #pages li {
         margin: 0 12px;
     }
 
-    div#header button,
-    div#footer i,
-    div#footer div#foto {
+    #header button,
+    #footer i,
+    #footer #foto {
         display: none;
     }
 }
