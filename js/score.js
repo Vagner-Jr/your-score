@@ -8,8 +8,8 @@ frm.addEventListener("submit", (e) => {
   const score1 = Number(frm.inScore1.value);
   const score2 = Number(frm.inScore2.value);
   const total = (score1 + score2) / 2;
-
   students.push({ name, score1, score2, total });
+
   let list = "";
   for (let i = 0; i < students.length; i++) {
     if (students[i].total < 4) {

@@ -118,17 +118,24 @@ div#footer button {
 /*div#dashboard*/
 body > div div#professors {
     grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;   
+    padding: 64px 16px 16px; 
+}
+
+div#professors::-webkit-scrollbar {
+    display: none;
+}
+
+#professor {
+    width: 80%;
     height: fit-content;
     display: flex;
     justify-content: center;
     gap: 12px;
     flex-wrap: wrap;
-    overflow-y: scroll;    
-    padding: 64px 16px 16px;
-}
-
-div#professors::-webkit-scrollbar {
-    display: none;
 }
 
 div#professors div.woman,
@@ -177,20 +184,17 @@ div.info p {
 }
 
 div.new {
-    width: 240px;
-    height: 183px;
+    width: 60%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-radius: 18px;
     padding: 12px;
+    margin-bottom: 32px;
+    border-radius: 12px;
     border: 1px solid var(--bg-sidebar);
     transition: hover 1s;
 }
 
 div.new button {
-    width: 160px;
-    height: 100px;
     font-size: 20px;
     color: var(--bg-sidebar);
     background: transparent;

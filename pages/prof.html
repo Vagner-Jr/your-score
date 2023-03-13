@@ -50,32 +50,12 @@
       </div>
 
       <div id="professors">
-        <div class="woman">
-          <div class="foto">
-            <i class="ph ph-user"></i>
-          </div>
-
-          <div class="info">
-            <h3></h3>
-            <p></p>
-          </div>
-        </div>
-
-        <div class="man">
-          <div class="foto">
-            <i class="ph ph-user"></i>
-          </div>
-
-          <div class="info">
-            <h3></h3>
-            <p></p>
-          </div>
-        </div>
-
         <div class="new">
           <button id="btn-new">NOVO PROFESSOR</button>
         </div>
 
+        <div id="professor"></div>
+        
         <dialog>
           <h1>Novo <span>Professor</span></h1>
 
@@ -85,12 +65,12 @@
 
             <div>
               <label class="check-container">Homem
-                <input type="checkbox" id="manChecked" />
+                <input type="radio" id="man" name="sex" value="man"/>
                 <span class="checkmark"></span>
               </label>
 
               <label class="check-container">Mulher
-                <input type="checkbox" id="womanChecked" />
+                <input type="radio" id="woman" name="sex" value="woman"/>
                 <span class="checkmark"></span>
               </label>
             </div>
