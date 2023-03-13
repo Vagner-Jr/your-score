@@ -16,6 +16,7 @@
         <div id="header">
           <button id="btn-sidebar"><i class="ph ph-list"></i></button>
         </div>
+
         <div id="pages">
           <ul class="list-pages">
             <li>
@@ -24,12 +25,14 @@
                 <p class="page-link">HOME</p>
               </a>
             </li>
+
             <li>
               <a href="score.html">
                 <i class="ph ph-backpack"></i>
                 <p class="page-link">TURMA</p>
               </a>
             </li>
+
             <li>
               <a href="prof.html">
                 <i class="ph ph-graduation-cap"></i>
@@ -40,8 +43,9 @@
         </div>
         <div id="footer"><i class="ph ph-arrow-left"></i></div>
       </div>
+
       <div id="register">
-        <div>
+        <div id="form">
           <h1>Próximo ano...</h1>
           <h4>
             Use esse aplicativo para calcular a soma das notas de seus alunos e
@@ -56,6 +60,7 @@
               <label for="inName">Aluno: </label>
               <input type="text" id="inName" required />
             </div>
+
             <div>
               <label for="inScore1">1° Nota:</label>
               <input
@@ -67,6 +72,7 @@
                 required
               />
             </div>
+
             <div>
               <label for="inScore2">2° Nota:</label>
               <input
@@ -78,26 +84,27 @@
                 required
               />
             </div>
+
             <input type="submit" value="CALCULAR" />
           </form>
         </div>
+
         <div id="score-table">
-          <table>
-            <thead>
-              <tr>
-                <th>NOME</th>
-                <th>1° NOTA</th>
-                <th>2° NOTA</th>
-                <th>TOTAL</th>
-              </tr>
-            </thead>
-            <tbody id="student"></tbody>
-          </table>
+          <div id="type">
+            <ul class="row type">
+              <li class="col">NOME</li>
+              <li class="col">1° NOTA</li>
+              <li class="col">2° NOTA</li>
+              <li class="col">TOTAL</li>
+            </ul>
+          </div>
+
+          <div class="student-total"></div>
         </div>
       </div>
     </div>
 
-    <script defer src="../js/scoreTable.js"></script>
+    <script defer src="../js/score.js"></script>
     <script defer src="../script.js"></script>
   </body>
 </html>

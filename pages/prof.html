@@ -51,20 +51,24 @@
 
       <div id="professors">
         <div class="woman">
-          <div class="foto"></div>
+          <div class="foto">
+            <i class="ph ph-user"></i>
+          </div>
 
           <div class="info">
-            <h3>Nome</h3>
-            <p>professor(a) de programação</p>
+            <h3></h3>
+            <p></p>
           </div>
         </div>
 
         <div class="man">
-          <div class="foto"></div>
+          <div class="foto">
+            <i class="ph ph-user"></i>
+          </div>
 
           <div class="info">
-            <h3>Nome</h3>
-            <p>professor(a) de programação</p>
+            <h3></h3>
+            <p></p>
           </div>
         </div>
 
@@ -76,25 +80,19 @@
           <h1>Novo <span>Professor</span></h1>
 
           <form>
-            <div>
-              <input type="text" id="inName" placeholder="Nome" required />
-            </div>
+            <input type="text" id="inName" placeholder="Nome" required />
+            <input type="text" id="inSubject" placeholder="Matéria" required />
 
             <div>
-              <input
-                type="text"
-                id="inSubject"
-                placeholder="Matéria"
-                required
-              />
-            </div>
+              <label class="check-container">Homem
+                <input type="checkbox" id="manChecked" />
+                <span class="checkmark"></span>
+              </label>
 
-            <div>
-              <input type="checkbox" id="manChecked" />
-              <label for="manChecked">Homem</label>
-              
-              <input type="checkbox" id="womanChecked" />
-              <label for="womanChecked">Mulher</label>
+              <label class="check-container">Mulher
+                <input type="checkbox" id="womanChecked" />
+                <span class="checkmark"></span>
+              </label>
             </div>
 
             <input type="submit" value="OK!" />

@@ -31,14 +31,14 @@ body > div {
     grid-template-columns: 80px 1fr;
 }
 
-body div.open {
+body .open {
     grid-template-areas: 
     'sidebar main';
     grid-template-columns: 160px 1fr;
 }
 
 /*div#sidebar*/
-body > div div#sidebar {
+body > div #sidebar {
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
@@ -47,36 +47,36 @@ body > div div#sidebar {
     box-shadow: 5px 0 10px #d1d1bf;
 }
 
-div#sidebar div#header {
+#sidebar #header {
     height: 64px;
     display: flex;
 }
 
-div.open div#header {
+.open #header {
     justify-content: center;
 }
 
-div#header button {
+#header button {
     background: transparent;
     outline: none;
     border: none;
     cursor: pointer;
 }
 
-div#header > p {
+#header > p {
     color: var(--text-color);
 }
 
-div#sidebar div#pages {
+#sidebar #pages {
     flex: 1;
     padding-top: 64px;
 }
 
-div#pages li {
+#pages li {
     margin-bottom: 24px;
 }
 
-div#pages a {
+#pages a {
     display: flex;
     align-items: center;
     color: var(--text-color);
@@ -88,7 +88,7 @@ a p.page-link {
     display: none;
 }
 
-div.open .page-link {
+.open .page-link {
     display: initial;
 }
 
@@ -97,17 +97,17 @@ i {
     font-size: 24px;
 }
 
-div#sidebar div#footer {
+#sidebar #footer {
     height: 64px;
     display: flex;
     align-items: center;
 }
 
-div.open div#footer {
+.open dv#footer {
     justify-content: center;
 }
 
-div#footer button {
+#footer button {
     background: transparent;
     outline: none;
     border: none;
@@ -115,19 +115,21 @@ div#footer button {
 }
 
 /*div#register*/
-body > div div#register {
+body > div #register {
     grid-area: main;
     display: flex;
     flex-direction: column;
+    gap: 24px;
     overflow-y: scroll;    
     padding: 64px 16px 16px;
 }
 
-div#register::-webkit-scrollbar {
+#register::-webkit-scrollbar {
     display: none;
 }
 
-div#register > div {
+/*div#form*/
+#register #form {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -135,18 +137,18 @@ div#register > div {
     gap: 32px;
 }
 
-div#register > div h4 {
+#form h4 {
     margin: 0 32px;
     text-align: justify;
 }
 
-div#register > div p {
+#register > div p {
     margin: 0 32px;
     font-style: italic;
     font-size: 12px;
 }
 
-div#register > div form {
+#register form {
     width: 80%;
     max-width: 400px;
     display: flex;
@@ -183,29 +185,45 @@ input[type='submit'] {
     padding: 6px 12px;
     border-radius: 4px;
     background: var(--bg-sidebar);
+    color: var(--text-color);
 }
 
-div#register div#score-table {
-    flex: 1;
+/*div#score-table*/
+#register #score-table {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     padding: 16px;
+    font-size: 12px;
+    background: white;
 }
 
-table {
-    width: 100%;
-    text-align: center;
+#score-table ul.type {
+    border: none;
+    padding: 6px;
+    border-radius: 6px;
+    color: var(--text-color);
+    background-color: var(--bg-sidebar);
 }
 
-thead th:first-child {
-    border-bottom: none
+#score-table .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--bg-sidebar);
 }
 
-tbody tr:first-child td {
-    padding-top: 24px;
+#score-table .col {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 22%;
 }
 
-td {
-    padding-top: 12px;
-    border-bottom: 1px solid black;
+#score-table .col:first-child{
+    width: 34%;
+    justify-content: start;
 }
 
 @media (max-width: 720px) {
