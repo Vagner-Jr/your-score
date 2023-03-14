@@ -24,9 +24,9 @@
   <img alt="projeto Portfolio" src=".github/preview.png" width="100%">
 </p>
 
-## 🚧 Status
+## ✅ Status
 
-Trabalhando nisso...
+Finalizado, mas haverá atualizações futuras.
 
 ## 🚀 Tecnologias
 
@@ -35,13 +35,12 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - HTML & CSS
 - JavaScript
 - Git & Github
-- Figma
 
 ## 💻 Projeto
 
   O projeto foi montado a partir de um exercício do livro Lógica de Programação e Algoritmos com JavaScript que seria somente o cálculo da nota do aluno e me deu a ideia de montar um projeto mais estruturado. 
 
-  A ideia do projeto seria de montar uma tabela com o nome do aluno, a primera e a segunda nota e o valor total da média das duas. O professor cadastra o nome do aluno e suas notas a serem calculadas.
+  O projeto ‘’your-score’’ foi desenvolvido com a ideia de uso para os coordenadores e professores de uma escola usarem para calcular as notas dos alunos de cada turma e para o registro dos professores. Esse projeto terá uma atualização futuramente pra mostra o que é registrado para os alunos e que são cadastrados virem as informações de suas notas e de seus colegas e paras pessoas que não tem cadastro não terão acesso apenas ao quadro de notas, mas as informações de professores e da escola sim.
 
   Você pode acessar o projeto online através [desse link](https://vagner-jr.github.io/your-score/).
 
